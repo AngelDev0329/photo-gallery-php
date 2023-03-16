@@ -6,7 +6,7 @@ function redirect_to($location = NULL) {
     }
 }
 
-function __autoload($class_name) {
+spl_autoload_register(function($class_name) {
     $class_name = strtolower($class_name);
     $path = LIB_PATH.DS."{$class_name}.php";
     if (file_exists($path)) {
@@ -14,7 +14,7 @@ function __autoload($class_name) {
     } else {
         die("The file {$class_name}.php colud not be found");
     }
-}
+});
 
 function include_layout_template($template="") {
     include(SITE_ROOT.DS.'public'.DS.'layouts'.DS.$template);

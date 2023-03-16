@@ -13,8 +13,7 @@
 */
 defined('DS') ? NULL : define('DS', DIRECTORY_SEPARATOR);
 
-defined('SITE_ROOT') ? NULL :
-    define('SITE_ROOT', DS.'xampp'.DS.'htdocs'.DS.'2018'.DS.'photo_gallery');
+defined('SITE_ROOT') ? NULL : define('SITE_ROOT', "../"); // define('SITE_ROOT', DS.'Volumes'.DS.'MyDATA'.DS.'Projects'.DS.'php_webs'.DS.'photo_gallery');
 
 defined('LIB_PATH') ? NULL : define('LIB_PATH', SITE_ROOT.DS.'includes');
 

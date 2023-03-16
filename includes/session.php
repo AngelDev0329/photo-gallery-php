@@ -63,7 +63,8 @@ class Session {
             $this->user_id = $_SESSION['user_id'];
             $this->logged_in = true;
         } else {
-            unset($this->user->id);
+            unset($this->user_id);
+            // unset($this->user->id);
             $this->logged_in = false;
         }
     }
